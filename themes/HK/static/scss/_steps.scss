@@ -3,8 +3,9 @@
 	background-color: $gray-100;
 
 	.hk-steps{
-		margin: 0;
-		padding: 0 15em;
+		margin: 0 auto;
+		padding: 0;
+		max-width: 700px;
 		li{
 			list-style-type: none;
 			// margin: 0 30px;

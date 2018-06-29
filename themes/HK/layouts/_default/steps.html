@@ -1,0 +1,22 @@
+{{ define "main" }}
+	{{- partial "step-indicator.html" . -}}
+
+	<div class="jumbotron jumbotron-fluid hk-banner">
+		<div class="container">
+			<div class="text-center position-relative">
+				<!-- <img src="{{"img/step1-header-img.jpg" | absURL}}"> -->
+				<h1 class="font-weight-bold text-capitalize text-white">3 steps for capturing health check data</h1>
+				<h4 class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="step-container">
+			{{- partial "step1.html" . -}}
+
+			{{- partial "step2.html" . -}}
+		</div>
+	</div>
+
+{{ end }}
