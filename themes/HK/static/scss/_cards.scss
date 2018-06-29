@@ -1,0 +1,15 @@
+.step-container{
+	max-width: 700px;
+	margin: auto;
+	margin-top: -160px;
+}
+
+.card{
+	&.step{
+		// padding: 2em;
+		margin-bottom: 100px;
+		&.current{
+			box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.15);
+		}
+	}
+}

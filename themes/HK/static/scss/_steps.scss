@@ -1,0 +1,27 @@
+.hk-step-wrapper{
+	padding: 20px;
+	background-color: $gray-100;
+
+	.hk-steps{
+		margin: 0;
+		padding: 0 15em;
+		li{
+			list-style-type: none;
+			// margin: 0 30px;
+			font-size: 16px;
+			color: $gray-500;
+			font-weight: bold;
+			i{
+				font-size: 20px;
+				margin-right: 10px;
+				color: $gray-300;
+			}
+			&.active{
+				color: $gray-700;
+				i{
+					color: theme-color("primary");
+				}
+			}
+		}
+	}
+}
