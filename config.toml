@@ -1,4 +1,5 @@
-baseURL = "http://example.org/"
+baseURL = "https://ajency.github.io/HK-healthcheck"
 languageCode = "en-us"
 title = "My New Hugo Site"
 theme = "HK"
+publishDir = "docs"

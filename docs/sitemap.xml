@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://ajency.github.io/HK-healthcheck/step1/</loc>
+    <lastmod>2018-06-04T12:57:20+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ajency.github.io/HK-healthcheck/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ajency.github.io/HK-healthcheck/</loc>
+    <lastmod>2018-06-04T12:57:20+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ajency.github.io/HK-healthcheck/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
