@@ -1,0 +1,53 @@
+/* Reset Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  background: transparent;
+  background-image: none;
+}
+/* Custom Select */
+.hk-custom-select {
+  position: relative;
+  display: block;
+  background: transparent;
+  overflow: hidden;
+}
+select {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  color: #fff;
+  cursor: pointer;
+}
+select::-ms-expand {
+  display: none;
+}
+/* Arrow */
+.hk-custom-select::after {
+  content: "\f078";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 20px;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  padding: 0 0.8em;
+  line-height: 2.5em;
+  color: $gray-500;
+  background: $gray-200;
+  pointer-events: none;
+}
+/* Transition */
+.hk-custom-select:hover::after {
+  color: theme-color("primary");
+}
+.hk-custom-select::after {
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}

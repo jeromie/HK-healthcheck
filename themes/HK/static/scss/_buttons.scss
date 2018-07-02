@@ -1,4 +1,9 @@
 .btn-lg {
-	font-size: 14px;
+	// font-size: 14px;
 	font-weight: 600;
+}
+
+.btn:disabled{
+	background-color: $gray-500;
+	border-color: $gray-500;
 }
