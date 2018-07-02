@@ -48,7 +48,7 @@
 	</div>
 
 	<div class="container">
-		<div class="step-container"><div class="card step step1 current p-2">
+		<div class="step-container"><div class="card step step1 current p-2" id="step1">
 	<div class="card-body">
 		<h3 class="mb-5 font-weight-bold">Mobile Details</h3>
 
@@ -64,68 +64,91 @@
 			<button class="btn btn-primary btn-lg text-uppercase">Continue to next step <i class="fas fa-long-arrow-alt-right"></i></button>
 		</div>
 	</div>
-</div><div class="card step step2 p-2">
+</div><div class="card step step2 p-2" id="step2">
 	<div class="card-body">
 		<h3 class="mb-5 font-weight-bold">Personal Information</h3>
 
-		<div class="row">
-			<div class="col-md-6">
-				<div class="form-group">
-				    <label for="name">Enter Name</label>
-				    <input type="text" class="form-control form-control-lg" id="name" placeholder="Eg: Raj Sharma">
+		<form class="needs-validation" novalidate>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+					    <label for="name">Enter Name</label>
+					    <input type="text" class="form-control form-control-lg" id="name" required="" placeholder="Eg: Raj Sharma">
+					    <div class="invalid-feedback field-error text-danger mt-1">
+					    	<i class="fas fa-exclamation-circle"></i> Please Enter Name
+					    </div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+					    <label for="gender">Gender</label>
+					    <div class="hk-custom-select ">
+						    <select class="form-control form-control-lg" required="">
+						    	<option>Male</option>
+						    	<option>Female</option>
+						    </select>
+					    </div>
+					    <div class="invalid-feedback field-error text-danger mt-1">
+					    	<i class="fas fa-exclamation-circle"></i> Please Enter Gender
+					    </div>
+					</div>
 				</div>
 			</div>
-			<div class="col-md-6">
-				<div class="form-group">
-				    <label for="gender">Gender</label>
-				    <select class="form-control form-control-lg">
-				    	<option>Male</option>
-				    	<option>Female</option>
-				    </select>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+					    <label for="dob">Date of Birth</label>
+					    <input type="date" class="form-control form-control-lg" id="dob" required="">
+					    <div class="invalid-feedback field-error text-danger mt-1">
+					    	<i class="fas fa-exclamation-circle"></i> Please Enter Date of Birth
+					    </div>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-6">
-				<div class="form-group">
-				    <label for="dob">Date of Birth</label>
-				    <input type="date" class="form-control form-control-lg" id="dob">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+					    <label for="weight">Weight (in kgs)</label>
+					    <input type="number" class="form-control form-control-lg" id="weight" required="" placeholder="Eg: 65">
+					    <div class="invalid-feedback field-error text-danger mt-1">
+					    	<i class="fas fa-exclamation-circle"></i> Please Enter Weight
+					    </div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+					    <label for="height">Height</label>
+					    <div class="d-flex">
+					    	<div class="">
+					    		<input type="number" class="form-control form-control-lg" id="" required="" placeholder="5'">
+					    	</div>
+					    	<div class="mx-1">
+					    		<input type="number" class="form-control form-control-lg" id="" required="" placeholder="6">
+					    	</div>
+					    	<div class="">
+					    		<div class="btn-group btn-group-lg btn-group-toggle" data-toggle="buttons" role="group">
+					    			<label class="btn btn-outline-primary btn-lg active">
+					    			    <input type="radio" name="height_ft" id="feet" autocomplete="off" checked> FT
+					    			</label>
+					    			<label class="btn btn-outline-primary btn-lg">
+					    			    <input type="radio" name="height_ft" id="cms" autocomplete="off"> CMS
+					    			</label>
+					    		</div>
+					    	</div>
+					    </div>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-6">
-				<div class="form-group">
-				    <label for="weight">Weight (in kgs)</label>
-				    <input type="number" class="form-control form-control-lg" id="weight" placeholder="Eg: 65">
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="form-group">
-				    <label for="height">Height</label>
-				    <div class="d-flex">
-				    	<div class="">
-				    		<input type="number" class="form-control form-control-lg" id="" placeholder="5'">
-				    	</div>
-				    	<div class="mx-1">
-				    		<input type="number" class="form-control form-control-lg" id="" placeholder="6">
-				    	</div>
-				    	<div class="">
-				    		<div class="btn-group btn-group-lg" role="group">
-				    		  <button type="button" class="btn btn-outline-primary btn-lg">FT</button>
-				    		  <button type="button" class="btn btn-outline-primary btn-lg">CMS</button>
-				    		</div>
-				    	</div>
-				    </div>
-				</div>
-			</div>
-		</div>
 
-		<div class="d-flex justify-content-end mt-5">
-			<button class="btn btn-primary btn-lg text-uppercase">Continue to next step <i class="fas fa-long-arrow-alt-right"></i></button>
-		</div>
+			<div class="d-flex justify-content-end align-items-center mt-5">
+				<div class="fomr-error text-danger mr-3">
+					<i class="fas fa-exclamation-circle"></i> There are items that require your attention
+				</div>
+				<button type="submit" class="btn btn-primary btn-lg text-uppercase">Continue to next step <i class="fas fa-long-arrow-alt-right"></i></button>
+			</div>
+		</form>
 	</div>
-</div><div class="card step step1 p-2">
+</div><div class="card step step1 p-2 disabled">
 	<div class="card-body">
 		<h3 class="mb-5 font-weight-bold">Health Data</h3>
 
@@ -226,11 +249,13 @@
 					</div>
 					<div class="col-md-8 text-right">
 						<div class="d-flex">
-							<input type="text" class="form-control form-control-lg" id="" placeholder="Results">
-							<select class="form-control form-control-lg ml-2">
-								<option>Classification</option>
-								<option>Classification 1</option>
-							</select>
+							<input type="text" class="form-control form-control-lg " id="" placeholder="Results">
+							<div class="hk-custom-select flex-fill w-100 ml-2">
+								<select class="form-control form-control-lg">
+									<option>Classification</option>
+									<option>Classification 1</option>
+								</select>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -247,10 +272,14 @@
 					<div class="col-md-8 text-right">
 						<div class="d-flex">
 							<input type="text" class="form-control form-control-lg" id="" placeholder="Results">
-							<select class="form-control form-control-lg ml-2">
-								<option>Classification</option>
-								<option>Classification 1</option>
-							</select>
+							<div class="hk-custom-select flex-fill w-100 ml-2">
+								<div class="hk-custom-select flex-fill w-100">
+									<select class="form-control form-control-lg">
+										<option>Classification</option>
+										<option>Classification 1</option>
+									</select>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -267,10 +296,12 @@
 					<div class="col-md-8 text-right">
 						<div class="d-flex">
 							<input type="text" class="form-control form-control-lg" id="" placeholder="Results">
-							<select class="form-control form-control-lg ml-2">
-								<option>Classification</option>
-								<option>Classification 1</option>
-							</select>
+							<div class="hk-custom-select flex-fill w-100 ml-2">
+								<select class="form-control form-control-lg">
+									<option>Classification</option>
+									<option>Classification 1</option>
+								</select>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -287,10 +318,12 @@
 					<div class="col-md-8 text-right">
 						<div class="d-flex">
 							<input type="text" class="form-control form-control-lg" id="" placeholder="Results">
-							<select class="form-control form-control-lg ml-2">
-								<option>Classification</option>
-								<option>Classification 1</option>
-							</select>
+							<div class="hk-custom-select flex-fill w-100 ml-2">
+								<select class="form-control form-control-lg">
+									<option>Classification</option>
+									<option>Classification 1</option>
+								</select>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -306,7 +339,7 @@
 					</div>
 					<div class="col-md-8 text-right">
 						<div class="d-flex">
-							<input type="text" class="form-control form-control-lg" id="" placeholder="Results">
+							<input type="text" class="form-control form-control-lg w-50" id="" placeholder="Results">
 						</div>
 					</div>
 				</div>
@@ -322,7 +355,7 @@
 					</div>
 					<div class="col-md-8 text-right">
 						<div class="d-flex">
-							<input type="text" class="form-control form-control-lg" id="" placeholder="Results">
+							<input type="text" class="form-control form-control-lg w-50" id="" placeholder="Results">
 						</div>
 					</div>
 				</div>
@@ -341,10 +374,12 @@
 								</div>
 							</div>
 							<div class="col-md-8 text-right">
-								<select class="form-control form-control-lg ml-2">
-									<option>Classification</option>
-									<option>Classification 1</option>
-								</select>
+								<div class="hk-custom-select flex-fill w-100 ml-2">
+									<select class="form-control form-control-lg">
+										<option>Classification</option>
+										<option>Classification 1</option>
+									</select>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -360,10 +395,12 @@
 								</div>
 							</div>
 							<div class="col-md-8 text-right">
-								<select class="form-control form-control-lg ml-2">
-									<option>Classification</option>
-									<option>Classification 1</option>
-								</select>
+								<div class="hk-custom-select flex-fill w-100 ml-2">
+									<select class="form-control form-control-lg">
+										<option>Classification</option>
+										<option>Classification 1</option>
+									</select>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -381,10 +418,12 @@
 								</div>
 							</div>
 							<div class="col-md-8 text-right">
-								<select class="form-control form-control-lg ml-2">
-									<option>Classification</option>
-									<option>Classification 1</option>
-								</select>
+								<div class="hk-custom-select flex-fill w-100 ml-2">
+									<select class="form-control form-control-lg">
+										<option>Classification</option>
+										<option>Classification 1</option>
+									</select>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -400,10 +439,12 @@
 								</div>
 							</div>
 							<div class="col-md-8 text-right">
-								<select class="form-control form-control-lg ml-2">
-									<option>Classification</option>
-									<option>Classification 1</option>
-								</select>
+								<div class="hk-custom-select flex-fill w-100 ml-2">
+									<select class="form-control form-control-lg">
+										<option>Classification</option>
+										<option>Classification 1</option>
+									</select>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -421,10 +462,12 @@
 								</div>
 							</div>
 							<div class="col-md-8 text-right">
-								<select class="form-control form-control-lg ml-2">
-									<option>Classification</option>
-									<option>Classification 1</option>
-								</select>
+								<div class="hk-custom-select flex-fill w-100 ml-2">
+									<select class="form-control form-control-lg">
+										<option>Classification</option>
+										<option>Classification 1</option>
+									</select>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -440,10 +483,12 @@
 								</div>
 							</div>
 							<div class="col-md-8 text-right">
-								<select class="form-control form-control-lg ml-2">
-									<option>Classification</option>
-									<option>Classification 1</option>
-								</select>
+								<div class="hk-custom-select flex-fill w-100 ml-2">
+									<select class="form-control form-control-lg">
+										<option>Classification</option>
+										<option>Classification 1</option>
+									</select>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -461,10 +506,12 @@
 								</div>
 							</div>
 							<div class="col-md-8 text-right">
-								<select class="form-control form-control-lg ml-2">
-									<option>Classification</option>
-									<option>Classification 1</option>
-								</select>
+								<div class="hk-custom-select flex-fill w-100 ml-2">
+									<select class="form-control form-control-lg">
+										<option>Classification</option>
+										<option>Classification 1</option>
+									</select>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -480,10 +527,12 @@
 								</div>
 							</div>
 							<div class="col-md-8 text-right">
-								<select class="form-control form-control-lg ml-2">
-									<option>Classification</option>
-									<option>Classification 1</option>
-								</select>
+								<div class="hk-custom-select flex-fill w-100 ml-2">
+									<select class="form-control form-control-lg">
+										<option>Classification</option>
+										<option>Classification 1</option>
+									</select>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -533,7 +582,26 @@
 </div></div>
 	</div>
 
+<script>
 
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    
+    var forms = document.getElementsByClassName('needs-validation');
+    
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
