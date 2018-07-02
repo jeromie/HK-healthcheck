@@ -2,6 +2,9 @@
 	max-width: 700px;
 	margin: auto;
 	margin-top: -160px;
+	@media(max-width: 767px){
+		margin-top: -80px;
+	}
 }
 
 .card{
