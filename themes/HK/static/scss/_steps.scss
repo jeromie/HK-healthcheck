@@ -24,5 +24,24 @@
 				}
 			}
 		}
+
+	}
+}
+
+@media(max-width: 767px){
+	.hk-step-wrapper{
+		padding: 20px 5px;
+		.hk-steps{
+			li{
+				text-align: center;
+				font-size: 13px;
+				line-height: 16px;
+				i{
+					width: 100%;
+					margin-right: 0;
+					margin-bottom: 5px;
+				}
+			}
+		}
 	}
 }
