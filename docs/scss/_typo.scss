@@ -1,9 +1,17 @@
 body{
 	font-family: "Open Sans", sans-serif;
+	// font-family: "Nunito", sans-serif;
 }
 
 label{
 	font-weight: bold;
 	text-transform: uppercase;
 	color: $gray-800;
+	&.required{
+		&:after{
+			content: "*";
+			color: $danger;
+			margin-left: 2px;
+		}
+	}
 }
