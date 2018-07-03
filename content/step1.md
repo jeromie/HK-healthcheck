@@ -5,4 +5,12 @@ draft: false
 layout: steps
 url: /step1/
 
+steps_status: "done active"
+
+step1_status: "current"
+step2_status: "disabled"
+step3_status: "disabled"
+
+step1_button: true
+
 ---

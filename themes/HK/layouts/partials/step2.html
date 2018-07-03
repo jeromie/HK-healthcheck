@@ -1,4 +1,4 @@
-<div class="card step step2 p-2" id="step2">
+<div class="card step step2 p-2 {{ $.Params.step2_status }}" id="step2">
 	<div class="card-body">
 		<h3 class="mb-5 font-weight-bold">Personal Information</h3>
 
@@ -6,7 +6,7 @@
 			<div class="row">
 				<div class="col-md-6">
 					<div class="form-group">
-					    <label for="name">Enter Name</label>
+					    <label class="required" for="name">Enter Name</label>
 					    <input type="text" class="form-control form-control-lg" id="name" required="" placeholder="Eg: Raj Sharma">
 					    <div class="invalid-feedback field-error text-danger mt-1">
 					    	<i class="fas fa-exclamation-circle"></i> Please Enter Name
@@ -15,7 +15,7 @@
 				</div>
 				<div class="col-md-6">
 					<div class="form-group">
-					    <label for="gender">Gender</label>
+					    <label class="required" for="gender">Gender</label>
 					    <div class="hk-custom-select ">
 						    <select class="form-control form-control-lg" required="">
 						    	<option>Male</option>
@@ -31,7 +31,7 @@
 			<div class="row">
 				<div class="col-md-6">
 					<div class="form-group">
-					    <label for="dob">Date of Birth</label>
+					    <label class="required" for="dob">Date of Birth</label>
 					    <input type="date" class="form-control form-control-lg" id="dob" required="" value="2018-12-31">
 					    <div class="invalid-feedback field-error text-danger mt-1">
 					    	<i class="fas fa-exclamation-circle"></i> Please Enter Date of Birth
@@ -42,7 +42,7 @@
 			<div class="row">
 				<div class="col-md-6">
 					<div class="form-group">
-					    <label for="weight">Weight (in kgs)</label>
+					    <label class="required" for="weight">Weight (in kgs)</label>
 					    <input type="number" class="form-control form-control-lg" id="weight" required="" placeholder="Eg: 65">
 					    <div class="invalid-feedback field-error text-danger mt-1">
 					    	<i class="fas fa-exclamation-circle"></i> Please Enter Weight
@@ -51,7 +51,7 @@
 				</div>
 				<div class="col-md-6">
 					<div class="form-group">
-					    <label for="height">Height</label>
+					    <label class="required" for="height">Height</label>
 					    <div class="d-flex">
 					    	<div class="">
 					    		<input type="number" class="form-control form-control-lg" id="" required="" placeholder="5'">
@@ -78,7 +78,7 @@
 				<div class="form-error text-danger mr-md-3 text-right">
 					<i class="fas fa-exclamation-circle"></i> There are items that require your attention
 				</div>
-				<button type="submit" class="btn btn-primary btn-lg text-uppercase">Continue to next step <i class="fas fa-long-arrow-alt-right"></i></button>
+				<button type="submit" class="btn btn-primary btn-lg text-uppercase">Continue to next step &#10132; </button>
 			</div>
 		</form>
 	</div>
