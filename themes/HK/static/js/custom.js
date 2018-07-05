@@ -25,7 +25,7 @@ $(function(){
 
 	// Scroll to id when click
 
-	$(document).on('click', 'button[data-href^="#"]', function(e) {
+	$(document).on('click', '[data-href^="#"]', function(e) {
 	   var id = $(this).attr('data-href');
 	    // target element
 	    var $id = $(id);
@@ -33,6 +33,7 @@ $(function(){
 	        return;
 	    }
 
+	    e.preventDefault();
 	    // top position relative to the document
 	    var pos = $id.offset().top - 120;
     
