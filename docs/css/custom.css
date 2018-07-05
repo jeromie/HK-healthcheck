@@ -7893,6 +7893,29 @@ header {
   color: #adb5bd; }
   .confirmModal .close:focus {
     outline: 0; }
+.confirmModal .success-data .check-circle {
+  list-style: none; }
+  .confirmModal .success-data .check-circle li {
+    margin-right: 3em;
+    background-color: #fff;
+    position: relative; }
+    .confirmModal .success-data .check-circle li:last-child {
+      margin-right: 0; }
+  .confirmModal .success-data .check-circle .fas {
+    font-size: 1.5em; }
+  .confirmModal .success-data .check-circle:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 45%;
+    width: 100%;
+    height: 2px;
+    background-color: #00bfbf; }
+.confirmModal .success-data .info-title {
+  font-size: 1.15em;
+  color: #6c757d; }
+.confirmModal .success-data .new-form-title {
+  font-size: 1.3em; }
 
 @media (max-width: 767px) {
   .hk-step-wrapper {
