@@ -7851,6 +7851,30 @@ header {
         .hk-step-wrapper .hk-steps li.done i {
           color: #00bfbf; }
 
+.return-message {
+  margin: 20px -20px -20px;
+  padding: 18px;
+  background-color: #00bfbf;
+  border-radius: 0; }
+  .return-message .fas {
+    font-size: 1.3em; }
+  .return-message .close {
+    opacity: 1;
+    font-size: 2.5em;
+    color: rgba(255, 255, 255, 0.94);
+    text-shadow: none; }
+    .return-message .close:focus {
+      outline: 0; }
+  @media screen and (max-width: 600px) {
+    .return-message {
+      margin: 20px -5px -20px;
+      padding: 15px 8px; }
+      .return-message h5 {
+        font-size: 0.9em;
+        line-height: 1.5; }
+      .return-message .close {
+        font-size: 1.6em; } }
+
 .confirmModal .modal-title {
   color: #6c757d;
   line-height: 1.5; }
@@ -7865,8 +7889,8 @@ header {
       min-width: 100px; } }
 .confirmModal .close {
   opacity: 1;
-  font-size: 2em;
-  color: #928f8f; }
+  font-size: 2.3em;
+  color: #adb5bd; }
   .confirmModal .close:focus {
     outline: 0; }
 
