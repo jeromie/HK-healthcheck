@@ -31,6 +31,39 @@
 	}
 }
 
+// Returning user alert
+.return-message{
+	margin: 20px -20px -20px;
+    padding: 18px;
+    background-color: theme-color("primary");
+    border-radius: 0;
+    .fas{
+    	font-size: 1.3em;
+    }
+    .close{
+    	opacity: 1;
+	    font-size: 2.5em;
+	    color: rgba(255, 255, 255, 0.94);
+	    text-shadow: none;
+	    &:focus{
+    		outline: 0;
+    	}
+    }
+    @media screen and (max-width: 600px){
+    	margin: 20px -5px -20px;
+    	padding: 15px 8px;
+    	h5{
+    		font-size: 0.9em;
+    		line-height: 1.5;	
+    	}
+    	.close{
+    		font-size: 1.6em;
+    	}
+    }
+}
+
+
+
 // Confirm modal
 
 .confirmModal{
@@ -53,8 +86,8 @@
 	}
 	.close{
 		opacity: 1;
-    	font-size: 2em;
-    	color: #928f8f;
+    	font-size: 2.3em;
+    	color: $gray-500;
     	&:focus{
     		outline: 0;
     	}
