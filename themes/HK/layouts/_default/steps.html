@@ -20,5 +20,45 @@
 			{{- partial "step3.html" . -}}
 		</div>
 	</div>
+	
+	<!-- Confirmation modal -->
+
+	<div class="modal fade confirmModal" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content text-center">
+				<div class="modal-header border-0 pb-0 pt-2">
+					<button type="button" class="close font-weight-light" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<!-- Confirm -->
+				<div class="confirm-data">
+					<div class="modal-body pt-0">
+						<img src="{{"img/quote-imp.png" | absURL}}" class="center-block">
+						<h5 class="mb-0 modal-title mt-2">Are you sure want to save the <br>information?</h5>
+					</div>
+					<div class="modal-footer justify-content-center border-0">
+						<button type="button" class="btn btn-cancel btn-lg text-uppercase" data-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-primary btn-lg text-uppercase show-success">Save</button>
+					</div>
+				</div>
+				<!-- success -->
+				<div class="success-data d-none">
+					<div class="modal-body pt-0">
+						<ul class="align-items-center d-inline-flex justify-content-center pl-0 position-relative check-circle mb-4">
+							<li><i class="fas fa-check-circle text-primary"></i></li>
+							<li><i class="fas fa-check-circle text-primary"></i></li>
+							<li><i class="fas fa-check-circle text-primary"></i></li>
+						</ul>
+						<h4 class="font-weight-bold">Congratulations!</h4>
+						<p class="mb-0 info-title">Your information has been submitted successfully</p>
+					</div>
+					<div class="modal-footer justify-content-center border-0 mb-2">
+						<h6 class="new-form-title m-2">To fill a new form <a href="#" class="text-uppercase font-weight-bold">Click here</a></h6>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
 
 {{ end }}
