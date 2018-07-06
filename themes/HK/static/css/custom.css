@@ -7830,7 +7830,8 @@ header {
 
 .hk-step-wrapper {
   padding: 20px;
-  background-color: #f8f9fa; }
+  background-color: #f8f9fa;
+  top: -1px; }
   .hk-step-wrapper .hk-steps {
     margin: 0 auto;
     padding: 0;
