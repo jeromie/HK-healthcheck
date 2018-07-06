@@ -9,6 +9,8 @@ step1_status: ""
 step2_status: ""
 step3_status: "current"
 
+step1_input: "disabled"
+
 step1_button: false
 
 ---

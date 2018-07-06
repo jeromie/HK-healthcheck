@@ -1,10 +1,10 @@
 <div class="card step step1 p-2 {{ $.Params.step1_status }}" id="step1">
 	<div class="card-body">
-		<h3 class="mb-5 font-weight-bold">Mobile Details</h3>
+		<h3 class="mb-5 font-weight-bold stepTitle">Mobile Details</h3>
 
 		<div class="form-group mobileno-wrapper">
 		    <label for="mobilenumber">Enter Mobile Number</label>
-		    <input type="tel" class="form-control form-control-lg" id="mobilenumber" placeholder="Eg: +919988776655">
+		    <input type="tel" class="form-control form-control-lg" id="mobilenumber" placeholder="Eg: +919988776655" {{ $.Params.step1_input }}>
 		    <div class="text-muted mt-2">
 		    	<i class="fas fa-info-circle"></i> The mobile number you provide will be used for User Identification.
 		    </div>
