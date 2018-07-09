@@ -7970,12 +7970,6 @@ label {
   max-width: 360px;
   margin: auto; }
 
-@media screen and (max-width: 400px) {
-  .step3 .custom-control-label {
-    font-size: 0.95em; }
-  .step3 .custom-control-inline {
-    margin-right: 0; } }
-
 .btn-lg, .btn-group-lg > .btn {
   font-weight: 700; }
 
