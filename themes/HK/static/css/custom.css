@@ -7847,6 +7847,8 @@ header {
         color: #dee2e6; }
       .hk-step-wrapper .hk-steps li.active {
         color: #495057; }
+        .hk-step-wrapper .hk-steps li.active i {
+          color: #000; }
       .hk-step-wrapper .hk-steps li.done {
         color: #495057; }
         .hk-step-wrapper .hk-steps li.done i {

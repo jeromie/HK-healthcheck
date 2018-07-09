@@ -19,6 +19,9 @@
 			}
 			&.active{
 				color: $gray-700;
+				i{
+					color: $black;	
+				}
 			}
 			&.done{
 				color: $gray-700;

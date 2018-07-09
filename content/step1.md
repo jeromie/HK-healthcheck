@@ -5,7 +5,7 @@ draft: false
 layout: steps
 url: /step1/
 
-steps_status: "done active"
+nav1_status: "active"
 
 step1_status: "current"
 step2_status: "disabled"
