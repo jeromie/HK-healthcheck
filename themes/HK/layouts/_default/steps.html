@@ -20,9 +20,8 @@
 			{{- partial "step3.html" . -}}
 		</div>
 	</div>
-	
-	<!-- Confirmation modal -->
 
+	<!-- Confirmation modal -->
 	<div class="modal fade confirmModal" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content text-center">
@@ -59,6 +58,9 @@
 				</div>
 			</div>
 		</div>
-	</div>	
+	</div>
+
+	<!-- Print container -->
+	{{- partial "print-pdf.html" . -}}
 
 {{ end }}

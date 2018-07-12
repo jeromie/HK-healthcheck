@@ -659,15 +659,14 @@
 
 		<a href="#" class="text-dark d-block my-4" data-href="#step2"><i class="fas fa-long-arrow-alt-left"></i> Back to Previous Step</a>
 		<div class="d-flex flex-wrap justify-content-between align-items-center mt-4">
-			<button class="btn btn-outline-primary btn-lg text-uppercase" >Print Form</button>
+			<button class="btn btn-outline-primary btn-lg text-uppercase print-report" >Print Form</button>
 			<button class="btn btn-primary btn-lg text-uppercase" disabled="" data-toggle="modal" data-target="#confirmModal">Save & Submit</button>
 		</div>
 	</div>
 </div></div>
 	</div>
-	
-	
 
+	
 	<div class="modal fade confirmModal" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content text-center">
@@ -704,9 +703,123 @@
 				</div>
 			</div>
 		</div>
-	</div>	
+	</div>
 
-<script>
+	<div class="d-none">
+	<div id="printform">
+		<div class="text-center">
+			<img src="https://jeromie.github.io/HK-healthcheck/img/hk-logo.jpg" class="img-fluid" width="300">
+		</div>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>
+						Name
+					</th>
+					<th>
+						Contact Number
+					</th>
+					<th>
+						Email ID
+					</th>
+					<th>
+						Age
+					</th>
+					<th>
+						Education
+					</th>
+					<th>
+						Smartphone
+					</th>
+					<th>
+						Heard about HK before?
+					</th>
+					<th>
+						Do you exercise?
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Apoorv Ailawadi</td>
+					<td>9654161626</td>
+					<td class="break">apoorv.ailawadi@gmail.com</td>
+					<td>30</td>
+					<td>PG</td>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>Not Often</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="row">
+			<div class="col-4">
+				<table class="table table-bordered">
+					<tr>
+						<th scope="row">Gender</th>
+						<td>Male</td>
+					</tr>
+					<tr>
+						<th scope="row">Height</th>
+						<td>5'11"</td>
+					</tr>
+					<tr>
+						<th scope="row">Body Weight</th>
+						<td>83</td>
+					</tr>
+				</table>
+
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th colspan="2" class="text-center">BMR/BMI</th>
+						</tr>
+					</thead>
+					<tr>
+						<th scope="row">Body Fat</th>
+						<td>23</td>
+					</tr>
+					<tr>
+						<th scope="row">Visceral Fat</th>
+						<td>17</td>
+					</tr>
+					<tr>
+						<th scope="row">Resting Metabolism</th>
+						<td>67</td>
+					</tr>
+					<tr>
+						<th scope="row">Body Mass Index</th>
+						<td>78</td>
+					</tr>
+					<tr>
+						<th scope="row">Body Age</th>
+						<td>32</td>
+					</tr>
+				</table>
+
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th colspan="2" class="text-center">Bone Density</th>
+						</tr>
+					</thead>
+					<tr>
+						<th scope="row">Range</th>
+						<td>-0.2</td>
+					</tr>
+					<tr>
+						<th scope="row">Case</th>
+						<td>OS</td>
+					</tr>
+				</table>
+			</div>
+			<div class="col-8">
+				<img src="https://jeromie.github.io/HK-healthcheck/img/ref-chart.png" class="img-fluid">
+			</div>
+		</div>
+	</div>
+</div><script>
 
 (function() {
   'use strict';
@@ -731,6 +844,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     
+    <script type="text/javascript" src="https://jeromie.github.io/HK-healthcheck/js/html2pdf.bundle.min.js"></script>
     <script type="text/javascript" src="https://jeromie.github.io/HK-healthcheck/js/custom.js"></script>
   </body>
 </html>

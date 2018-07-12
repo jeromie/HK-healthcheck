@@ -8997,3 +8997,7 @@ select::-ms-expand {
 .modal-content {
   border-radius: 0;
 }
+
+#printform table td.break {
+  word-break: break-all;
+}
