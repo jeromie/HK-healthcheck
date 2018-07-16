@@ -65,4 +65,16 @@ $(function(){
 		}
 	});
 
+	// Datepicker for desktop only
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	} else {
+		$('.dob').datetimepicker({
+			timepicker:false,
+			format:'Y-m-d',
+			maxDate: 0,
+			todayButton: false
+		});
+	}
+
+
 });

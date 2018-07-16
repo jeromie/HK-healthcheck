@@ -8997,6 +8997,32 @@ select::-ms-expand {
   transition: .25s all ease;
 }
 
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default,
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current,
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div.xdsoft_current {
+  background: #00bfbf;
+  box-shadow: #00bfbf 0 1px 3px 0 inset;
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_today {
+  color: #00bfbf;
+}
+
+.xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option.xdsoft_current {
+  background: #00bfbf;
+  box-shadow: #00bfbf 0 1px 3px 0 inset;
+}
+
+.xdsoft_datetimepicker .xdsoft_month {
+  text-align: center;
+}
+
 .modal-content {
   border-radius: 0;
 }
