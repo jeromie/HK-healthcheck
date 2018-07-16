@@ -57,7 +57,7 @@
 
 	<div class="container">
 		<div class="step-container"><div class="card step step1 p-2 " id="step1">
-	<div class="card-body">
+	<div class="card-body p-2 p-sm-3">
 		<h3 class="mb-5 font-weight-bold stepTitle">Mobile Details</h3>
 
 		<div class="form-group mobileno-wrapper">
@@ -71,7 +71,7 @@
 		
 	</div>
 </div><div class="card step step2 p-2 " id="step2">
-	<div class="card-body">
+	<div class="card-body p-2 p-sm-3">
 		<h3 class="mb-5 font-weight-bold stepTitle">Personal Information</h3>
 
 		<form class="needs-validation" novalidate>
@@ -129,7 +129,7 @@
 					<div class="form-group">
 						<label class="required" for="location">Location</label>
 						<div class="hk-custom-select ">
-							<select class="form-control form-control-lg" required="">
+							<select class="form-control form-control-lg location-select" required="" name="location">
 								<option value="other">Others</option>
 								<optgroup label="Corporate Camp">
 								    <option value="comp1">Company 1</option>
@@ -144,7 +144,7 @@
 					</div>
 				</div>
 				<div class="col-md-6">
-					<div class="form-group">
+					<div class="form-group other-location">
 						<label class="" for="other">Other Location</label>
 						<input type="text" class="form-control form-control-lg" id="name" required="" placeholder="Enter the location">
 					</div>
@@ -185,7 +185,7 @@
 		</form>
 	</div>
 </div><div class="card step step3 p-2 current" id="step3">
-	<div class="card-body">
+	<div class="card-body p-2 p-sm-3">
 		<h3 class="mb-5 font-weight-bold stepTitle">Health Data</h3>
 
 		<h5 class="text-primary font-weight-bold">Health History</h5>
@@ -625,7 +625,7 @@
 				<div class="card bg-light mb-2">
 					<div class="card-body p-3 ">
 						<div class="custom-control custom-radio">
-						  <input type="radio" id="normal" name="minerals" class="custom-control-input">
+						  <input type="radio" id="normal" name="minerals" class="custom-control-input" checked="">
 						  <label class="custom-control-label" for="normal">Normal</label>
 						</div>
 					</div>
@@ -653,10 +653,10 @@
 			</div>
 		</div>
 
-		<a href="#" class="text-dark d-block my-4" data-href="#step2"><i class="fas fa-long-arrow-alt-left"></i> Back to Previous Step</a>
-		<div class="d-flex flex-wrap justify-content-between align-items-center mt-4">
-			<button class="btn btn-outline-primary btn-lg text-uppercase print-report" >Print Form</button>
-			<button class="btn btn-primary btn-lg text-uppercase" data-toggle="modal" data-target="#confirmModal">Save & Submit</button>
+		<a href="#" class="text-dark d-block my-4 text-sm-left text-center" data-href="#step2"><i class="fas fa-long-arrow-alt-left"></i> Back to Previous Step</a>
+		<div class="d-flex justify-content-sm-between align-items-center flex-wrap justify-content-center mt-4">
+			<button class="btn btn-outline-primary btn-lg text-uppercase print-report mb-2" >Print Form</button>
+			<button class="btn btn-primary btn-lg text-uppercase mb-2" data-toggle="modal" data-target="#confirmModal">Save & Submit</button>
 		</div>
 	</div>
 </div></div>

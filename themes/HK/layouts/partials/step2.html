@@ -1,5 +1,5 @@
 <div class="card step step2 p-2 {{ $.Params.step2_status }}" id="step2">
-	<div class="card-body">
+	<div class="card-body p-2 p-sm-3">
 		<h3 class="mb-5 font-weight-bold stepTitle">Personal Information</h3>
 
 		<form class="needs-validation" novalidate>
@@ -57,7 +57,7 @@
 					<div class="form-group">
 						<label class="required" for="location">Location</label>
 						<div class="hk-custom-select ">
-							<select class="form-control form-control-lg" required="">
+							<select class="form-control form-control-lg location-select" required="" name="location">
 								<option value="other">Others</option>
 								<optgroup label="Corporate Camp">
 								    <option value="comp1">Company 1</option>
@@ -72,7 +72,7 @@
 					</div>
 				</div>
 				<div class="col-md-6">
-					<div class="form-group">
+					<div class="form-group other-location">
 						<label class="" for="other">Other Location</label>
 						<input type="text" class="form-control form-control-lg" id="name" required="" placeholder="Enter the location">
 					</div>

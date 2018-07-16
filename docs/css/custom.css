@@ -8930,6 +8930,9 @@ label.required:after {
   background-color: #ced4da;
   border-radius: 50%;
 }
+.card.step:last-child {
+  margin-bottom: 50px;
+}
 .card.step:last-child:before, .card.step:last-child:after {
   display: none;
 }
