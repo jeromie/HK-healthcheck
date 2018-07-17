@@ -77,7 +77,7 @@
 		<form class="needs-validation" onsubmit="checkNextStep(this,event);return false;" novalidate>
 			<div class="form-group mobileno-wrapper">
 			    <label for="mobilenumber">Enter Mobile Number</label>
-			    <input type="tel" required="" pattern="^(\+91)\d{10}$" class="form-control form-control-lg" id="mobilenumber" placeholder="Eg: +919988776655" ZgotmplZ>
+			    <input type="tel" required="" pattern="^(\+91)\d{10}$" onkeyup="resetForm();" class="form-control form-control-lg" id="mobilenumber" placeholder="Eg: +919988776655" ZgotmplZ>
 			    <div class="invalid-feedback field-error text-danger mt-1">
 					<i class="fas fa-exclamation-circle"></i> Please Enter Mobile Number
 				</div>
@@ -126,7 +126,7 @@
 				<div class="col-md-6">
 					<div class="form-group">
 						<label class="required" for="dob">Date of Birth</label>
-						<input type="date" class="form-control form-control-lg dob" id="dob" required="" value="2018-07-01">
+						<input type="date" class="form-control form-control-lg dob" id="dob" required="" value="">
 						<div class="invalid-feedback field-error text-danger mt-1">
 							<i class="fas fa-exclamation-circle"></i> Please Enter Date of Birth
 						</div>

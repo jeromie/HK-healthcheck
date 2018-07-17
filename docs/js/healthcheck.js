@@ -44,3 +44,15 @@ function scrollToStep(step){
 	$('html, body').animate({scrollTop: pos}, 'slow');
 	window.location.hash=id
 }
+
+function resetForm(){
+	$('.step-container .step').removeClass('current')
+	$('.step-container .step').removeClass('disabled')
+	$('.step-container .step:not("#step1")').addClass('disabled')
+	$('#step1').addClass('current')
+
+	$('.hk-steps li').removeClass('done')
+	$('.hk-steps li').removeClass('active')
+	$('.hk-steps li:eq(0)').addClass('active')
+	
+}
