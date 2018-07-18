@@ -8678,11 +8678,30 @@ a.text-cancel:hover, a.text-cancel:focus {
     border-color: #dee2e6;
   }
 }
+body {
+  background: linear-gradient(to right, #c5dce2 0%, #cce1e8 51%, #c5dce2 100%);
+}
+
+.bg-wrapper {
+  background-image: url(../img/bg-hk.jpg);
+  background-size: 100%;
+  background-position: right 120px;
+  background-repeat: no-repeat;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .bg-wrapper {
+    background-position: right 40px;
+    background-size: 200%;
+  }
+}
+
 .hk-header-logo {
   width: 150px;
 }
 
 header {
+  background-color: #fff;
   box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.15);
   padding: 15px 20px 10px;
   position: relative;
@@ -8832,9 +8851,9 @@ header {
   }
 }
 .hk-banner {
-  background-image: url(../img/dummy-bg-img.jpg);
+  background-image: url(../img/hk-banner-bg.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: 50% 40%;
   padding: 12rem 2rem;
   position: relative;
 }
@@ -8917,17 +8936,17 @@ label.required:after {
   right: 0;
   margin: auto;
 }
-.card.step:after {
-  border-right: 2px dashed #ced4da;
+.card.step:before {
+  border-right: 2px dashed #adb5bd;
   bottom: -80px;
   height: 60px;
   width: 2px;
 }
-.card.step:before {
+.card.step:after {
   bottom: -55px;
   height: 15px;
   width: 15px;
-  background-color: #ced4da;
+  background-color: #00bfbf;
   border-radius: 50%;
 }
 .card.step:last-child {
