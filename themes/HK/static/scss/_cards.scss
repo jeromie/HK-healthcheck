@@ -27,17 +27,17 @@
 			right: 0;
 			margin: auto;
 		}
-		&:after{
-			border-right: 2px dashed $gray-400;
+		&:before{
+			border-right: 2px dashed $gray-500;
 			bottom: -80px;
 			height: 60px;
 			width: 2px;
 		}
-		&:before{
+		&:after{
 			bottom: -55px;
 			height: 15px;
 			width: 15px;
-			background-color: $gray-400;
+			background-color: theme-color("primary");
 			border-radius: 50%;
 		}
 		&:last-child{
