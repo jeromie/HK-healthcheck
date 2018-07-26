@@ -1802,7 +1802,7 @@ pre code {
   box-shadow: 0;
 }
 .form-control::placeholder {
-  color: #6c757d;
+  color: #adb5bd;
   opacity: 1;
 }
 .form-control:disabled, .form-control[readonly] {
@@ -8684,9 +8684,10 @@ body {
 
 .bg-wrapper {
   background-image: url(../img/bg-hk.jpg);
-  background-size: 100%;
-  background-position: right 120px;
+  background-size: 120%;
+  background-position: right 60px;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   position: relative;
 }
 @media (max-width: 767px) {
@@ -8740,6 +8741,19 @@ header {
 }
 .hk-step-wrapper .hk-steps li.done i {
   color: #00bfbf;
+}
+
+.step-container {
+  max-width: 700px;
+  margin: auto;
+  margin-top: -160px;
+  z-index: 1;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .step-container {
+    margin-top: -80px;
+  }
 }
 
 .return-message {
@@ -8856,6 +8870,7 @@ header {
   background-position: 50% 40%;
   padding: 12rem 2rem;
   position: relative;
+  z-index: 1;
 }
 .hk-banner:before {
   content: '';
@@ -8904,17 +8919,6 @@ label.required:after {
 .btn:disabled {
   background-color: #adb5bd;
   border-color: #adb5bd;
-}
-
-.step-container {
-  max-width: 700px;
-  margin: auto;
-  margin-top: -160px;
-}
-@media (max-width: 767px) {
-  .step-container {
-    margin-top: -80px;
-  }
 }
 
 .card.step {

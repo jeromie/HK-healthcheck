@@ -2,8 +2,10 @@
 	background-image: url(../img/hk-banner-bg.jpg);
 	background-size: cover;
 	background-position: 50% 40%;
+	// background-attachment: fixed;
 	padding: 12rem 2rem;
 	position: relative;
+	z-index: 1;
 	&:before{
 		content: '';
 		position: absolute;

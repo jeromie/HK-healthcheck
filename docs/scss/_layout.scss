@@ -6,13 +6,17 @@ body{
 
 .bg-wrapper{
 	background-image: url(../img/bg-hk.jpg);
-	background-size: 100%;
-	background-position: right 120px;
+	background-size: 120%;
+	background-position: right 60px;
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 	position: relative;
 	// &:before{
 	// 	content: '';
-	// 	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #fff 100%);
+	// 	background-image: url(../img/bg-hk.jpg);
+	// 	background-size: 100%;
+	// 	background-position: right 120px;
+	// 	background-repeat: no-repeat;
 	// 	position: absolute;
 	// 	left: 0;
 	// 	right: 0;

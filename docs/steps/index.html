@@ -42,7 +42,7 @@
 	</div>
 	
 	<div class="alert alert-primary alert-dismissible fade show text-center return-message border-0" role="alert">
-		<h5 class="font-weight-light mb-0 text-uppercase text-white d-flex d-md-block flex-column"><i class="fas fa-exclamation-circle align-text-bottom mb-2 mb-md-0"></i> <span>Returning user. Data last updated on <strong class="font-weight-bold">30th June 2018</strong></span></h5>
+		<h5 class="mb-0 text-white d-flex d-md-block flex-column"><i class="fas fa-info-circle align-text-bottom mb-2 mb-md-0"></i> <span>Returning user. Data last updated on <strong class="font-weight-bold">30th June 2018</strong></span></h5>
 		<button type="button" class="close font-weight-light" data-dismiss="alert" aria-label="Close">
 			<span aria-hidden="true">&times;</span>
 		</button>
@@ -59,27 +59,38 @@
 
 	<div class="bg-wrapper">
 		<div class="container">
-			<div class="step-container"><div class="card step step1 p-2 current" id="step1">
+			<div class="step-container"><div class="card step step1 p-2 current" id="step1" data-step="1">
 	<div class="card-body p-2 p-sm-3">
 		<h3 class="mb-5 font-weight-bold stepTitle">Mobile Details</h3>
 
-		<div class="form-group mobileno-wrapper">
-		    <label for="mobilenumber">Enter Mobile Number</label>
-		    <input type="tel" class="form-control form-control-lg" id="mobilenumber" placeholder="Eg: +919988776655" ZgotmplZ>
-		    <div class="text-muted mt-2">
-		    	<i class="fas fa-info-circle"></i> The mobile number you provide will be used for User Identification.
-		    </div>
-		</div>
+		<form class="needs-validation" onsubmit="checkNextStep(this,event);return false;" novalidate>
+			<div class="form-group mobileno-wrapper">
+				<label for="mobilenumber">Enter Mobile Number</label>
+				<input type="tel" required="" pattern="^(\+91)\d{10}$" onkeyup="resetForm();" class="form-control form-control-lg" id="mobilenumber" placeholder="Eg: +919988776655" ZgotmplZ ZgotmplZ>
+				<div class="invalid-feedback field-error text-danger mt-1">
+					<i class="fas fa-exclamation-circle"></i> Please enter a 10-digit mobile number
+				</div>
+				<div class="text-muted mt-2">
+					<i class="fas fa-info-circle"></i> The mobile number you provide will be used for User Identification.
+				</div>
+			</div>
 
-		
-		<div class="d-flex justify-content-end mt-5">
-			<button class="btn btn-primary btn-lg text-uppercase" data-href="#step2">Continue to next step &#10132; </button>
-		</div>
-		
+			
+			<div class="d-flex justify-content-end mt-5">
+				<button class="btn btn-primary btn-lg text-uppercase" type="submit" >Continue to next step &#10132; </button>
+			</div>
+			
+		</form>
 	</div>
 </div><div class="card step step2 p-2 current" id="step2">
 	<div class="card-body p-2 p-sm-3">
-		<h3 class="mb-5 font-weight-bold stepTitle">Personal Information</h3>
+		<h3 class="mb-4 font-weight-bold stepTitle">Personal Information</h3>
+		<div class="alert alert-info alert-dismissible fade show mb-4" role="alert">
+		  	<i class="fas fa-info-circle "></i> Returning user. Data last updated on 30th June 2018
+		  	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		      <span aria-hidden="true">&times;</span>
+		    </button>
+		</div>
 
 		<form class="needs-validation" novalidate>
 			<div class="row">
@@ -111,7 +122,7 @@
 				<div class="col-md-6">
 					<div class="form-group">
 						<label class="required" for="dob">Date of Birth</label>
-						<input type="date" class="form-control form-control-lg dob" id="dob" required="" value="2018-07-01">
+						<input type="date" class="form-control form-control-lg dob" id="dob" required="" value="">
 						<div class="invalid-feedback field-error text-danger mt-1">
 							<i class="fas fa-exclamation-circle"></i> Please Enter Date of Birth
 						</div>
@@ -154,6 +165,9 @@
 					<div class="form-group other-location">
 						<label class="" for="other">Other Location</label>
 						<input type="text" class="form-control form-control-lg" id="name" required="" placeholder="Enter the location">
+						<div class="invalid-feedback field-error text-danger mt-1">
+							<i class="fas fa-exclamation-circle"></i> Please Enter Location
+						</div>
 					</div>
 				</div>
 			</div>
@@ -181,13 +195,13 @@
 			</div>
 
 			<div class="d-flex justify-content-sm-start align-items-center flex-wrap mt-sm-4 justify-content-center">
-				<div class="form-error text-danger mr-md-3 mb-2 mb-sm-0 text-center text-sm-right">
+				<div class="form-error text-danger mr-md-3 mb-2 mb-sm-0 text-center text-sm-right d-none">
 					<i class="fas fa-exclamation-circle"></i> There are items that require your attention
 				</div>
 			</div>
 			<div class="d-flex justify-content-sm-between align-items-center flex-wrap mt-sm-2 justify-content-center">
 				<button type="submit" class="btn btn-outline-primary btn-lg text-uppercase mb-2" data-href="#step3">Save &amp; Close </button>
-				<button type="submit" class="btn btn-primary btn-lg text-uppercase mb-2" data-href="#step3">Save &amp; Continue to next step &#10132; </button>
+				<button type="submit" class="btn btn-primary btn-lg text-uppercase mb-2" >Save &amp; Continue to next step &#10132; </button>
 			</div>
 		</form>
 	</div>
@@ -835,6 +849,7 @@
       form.addEventListener('submit', function(event) {
         if (form.checkValidity() === false) {
           event.preventDefault();
+          $(form).find('.form-error').removeClass('d-none');
           event.stopPropagation();
         }
         form.classList.add('was-validated');
@@ -850,6 +865,8 @@
     
     <script type="text/javascript" src="https://jeromie.github.io/HK-healthcheck/js/html2pdf.bundle.min.js"></script>
     <script type="text/javascript" src="https://jeromie.github.io/HK-healthcheck/js/jquery.datetimepicker.full.min.js"></script>
+    <script type="text/javascript" src="https://jeromie.github.io/HK-healthcheck/js/jquery.validate.min.js"></script>
     <script type="text/javascript" src="https://jeromie.github.io/HK-healthcheck/js/custom.js"></script>
+    <script type="text/javascript" src="https://jeromie.github.io/HK-healthcheck/js/healthcheck.js"></script>
   </body>
 </html>

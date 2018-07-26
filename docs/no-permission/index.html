@@ -54,6 +54,7 @@
       form.addEventListener('submit', function(event) {
         if (form.checkValidity() === false) {
           event.preventDefault();
+          $(form).find('.form-error').removeClass('d-none');
           event.stopPropagation();
         }
         form.classList.add('was-validated');
@@ -69,6 +70,8 @@
     
     <script type="text/javascript" src="https://jeromie.github.io/HK-healthcheck/js/html2pdf.bundle.min.js"></script>
     <script type="text/javascript" src="https://jeromie.github.io/HK-healthcheck/js/jquery.datetimepicker.full.min.js"></script>
+    <script type="text/javascript" src="https://jeromie.github.io/HK-healthcheck/js/jquery.validate.min.js"></script>
     <script type="text/javascript" src="https://jeromie.github.io/HK-healthcheck/js/custom.js"></script>
+    <script type="text/javascript" src="https://jeromie.github.io/HK-healthcheck/js/healthcheck.js"></script>
   </body>
 </html>
