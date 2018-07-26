@@ -76,5 +76,17 @@ $(function(){
 		});
 	}
 
+	// Enable submit button if valid number
+	$('#mobNumber input').on('keyup', function () {
+		var mobileform = document.getElementById('mobNumber');
+		if (mobileform.checkValidity() === false) {
+		  event.preventDefault();
+		  $('.mob-save').prop('disabled', true)
+		  event.stopPropagation();
+		} else {
+	        $('.mob-save').removeAttr('disabled')
+	    }
+	});
+
 
 });

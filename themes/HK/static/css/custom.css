@@ -9046,6 +9046,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   text-align: center;
 }
 
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_today {
+  color: #fff;
+}
+
 .modal-content {
   border-radius: 0;
 }

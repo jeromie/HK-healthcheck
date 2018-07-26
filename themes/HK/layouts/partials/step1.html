@@ -2,10 +2,10 @@
 	<div class="card-body p-2 p-sm-3">
 		<h3 class="mb-5 font-weight-bold stepTitle">Mobile Details</h3>
 
-		<form class="needs-validation" onsubmit="checkNextStep(this,event);return false;" novalidate>
+		<form class="needs-validation" onsubmit="checkNextStep(this,event);return false;" novalidate id="mobNumber">
 			<div class="form-group mobileno-wrapper">
 				<label for="mobilenumber">Enter Mobile Number</label>
-				<input type="tel" required="" pattern="^(\+91)\d{10}$" onkeyup="resetForm();" class="form-control form-control-lg" id="mobilenumber" placeholder="Eg: +919988776655" ZgotmplZ {{ $.Params.step1_input }}>
+				<input type="tel" required="" pattern="^\d{10}$" onkeyup="resetForm();" class="form-control form-control-lg" placeholder="Eg: 9988776655" ZgotmplZ {{ $.Params.step1_input }}>
 				<div class="invalid-feedback field-error text-danger mt-1">
 					<i class="fas fa-exclamation-circle"></i> Please enter a 10-digit mobile number
 				</div>
@@ -16,7 +16,8 @@
 
 			{{ if $.Params.step1_button }}
 			<div class="d-flex justify-content-end mt-5">
-				<button class="btn btn-primary btn-lg text-uppercase" type="submit" >Continue to next step &#10132; </button>
+				<button class="btn btn-primary btn-lg text-uppercase save-btn mob-save" type="submit" disabled="">Continue to next step &#10132; </button>
+				<button class="btn btn-primary btn-lg text-uppercase save-loader d-none" type="button" disabled="">Saving <i class="fas fa-circle-notch fa-spin"></i></button>
 			</div>
 			{{ end }}
 		</form>

@@ -3,23 +3,25 @@ $(function(){
 });
 
 function checkNextStep(thisObj,event){
-	event.preventDefault(); 
+	event.preventDefault();
 	if(thisObj.checkValidity() == false)
 		return
 	var step=$(thisObj).closest('.step').data('step')
+	$(thisObj).find('.save-loader').removeClass('d-none')
+	$(thisObj).find('.save-btn').addClass('d-none')
 	goToStep(step)
 
 	$('.hk-steps li:eq('+(step-1)+')').addClass('done')
 	$('.hk-steps li:eq('+(step-1)+')').removeClass('active')
 	$('.hk-steps li:eq('+(step)+')').addClass('active')
-	
+
 	return false;
 }
 
 function goToStep(step){
-	
+
 	$('#step'+step).removeClass('current')
-	
+
 	if(step <=2){
 		$('#step'+(step+1)).removeClass('disabled')
 		$('#step'+(step+1)).addClass('current')
@@ -54,5 +56,5 @@ function resetForm(){
 	$('.hk-steps li').removeClass('done')
 	$('.hk-steps li').removeClass('active')
 	$('.hk-steps li:eq(0)').addClass('active')
-	
+
 }
