@@ -1,19 +1,24 @@
-<div class="card step step1 p-2 {{ $.Params.step1_status }}" id="step1">
+<div class="card step step1 p-2 {{ $.Params.step1_status }}" id="step1" data-step="1">
 	<div class="card-body p-2 p-sm-3">
 		<h3 class="mb-5 font-weight-bold stepTitle">Mobile Details</h3>
 
-		<div class="form-group mobileno-wrapper">
-		    <label for="mobilenumber">Enter Mobile Number</label>
-		    <input type="tel" class="form-control form-control-lg" id="mobilenumber" placeholder="Eg: +919988776655" {{ $.Params.step1_input }}>
-		    <div class="text-muted mt-2">
-		    	<i class="fas fa-info-circle"></i> The mobile number you provide will be used for User Identification.
-		    </div>
-		</div>
+		<form class="needs-validation" onsubmit="checkNextStep(this,event);return false;" novalidate>
+			<div class="form-group mobileno-wrapper">
+				<label for="mobilenumber">Enter Mobile Number</label>
+				<input type="tel" required="" pattern="^(\+91)\d{10}$" onkeyup="resetForm();" class="form-control form-control-lg" id="mobilenumber" placeholder="Eg: +919988776655" ZgotmplZ {{ $.Params.step1_input }}>
+				<div class="invalid-feedback field-error text-danger mt-1">
+					<i class="fas fa-exclamation-circle"></i> Please enter a 10-digit mobile number
+				</div>
+				<div class="text-muted mt-2">
+					<i class="fas fa-info-circle"></i> The mobile number you provide will be used for User Identification.
+				</div>
+			</div>
 
-		{{ if $.Params.step1_button }}
-		<div class="d-flex justify-content-end mt-5">
-			<button class="btn btn-primary btn-lg text-uppercase" data-href="#step2">Continue to next step &#10132; </button>
-		</div>
-		{{ end }}
+			{{ if $.Params.step1_button }}
+			<div class="d-flex justify-content-end mt-5">
+				<button class="btn btn-primary btn-lg text-uppercase" type="submit" >Continue to next step &#10132; </button>
+			</div>
+			{{ end }}
+		</form>
 	</div>
 </div>

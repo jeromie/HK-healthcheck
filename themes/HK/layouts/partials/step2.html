@@ -1,6 +1,12 @@
 <div class="card step step2 p-2 {{ $.Params.step2_status }}" id="step2">
 	<div class="card-body p-2 p-sm-3">
-		<h3 class="mb-5 font-weight-bold stepTitle">Personal Information</h3>
+		<h3 class="mb-4 font-weight-bold stepTitle">Personal Information</h3>
+		<div class="alert alert-info alert-dismissible fade show mb-4" role="alert">
+		  	<i class="fas fa-info-circle "></i> Returning user. Data last updated on 30th June 2018
+		  	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		      <span aria-hidden="true">&times;</span>
+		    </button>
+		</div>
 
 		<form class="needs-validation" novalidate>
 			<div class="row">
@@ -32,7 +38,7 @@
 				<div class="col-md-6">
 					<div class="form-group">
 						<label class="required" for="dob">Date of Birth</label>
-						<input type="date" class="form-control form-control-lg dob" id="dob" required="" value="2018-07-01">
+						<input type="date" class="form-control form-control-lg dob" id="dob" required="" value="">
 						<div class="invalid-feedback field-error text-danger mt-1">
 							<i class="fas fa-exclamation-circle"></i> Please Enter Date of Birth
 						</div>
@@ -75,6 +81,9 @@
 					<div class="form-group other-location">
 						<label class="" for="other">Other Location</label>
 						<input type="text" class="form-control form-control-lg" id="name" required="" placeholder="Enter the location">
+						<div class="invalid-feedback field-error text-danger mt-1">
+							<i class="fas fa-exclamation-circle"></i> Please Enter Location
+						</div>
 					</div>
 				</div>
 			</div>
@@ -102,13 +111,13 @@
 			</div>
 
 			<div class="d-flex justify-content-sm-start align-items-center flex-wrap mt-sm-4 justify-content-center">
-				<div class="form-error text-danger mr-md-3 mb-2 mb-sm-0 text-center text-sm-right">
+				<div class="form-error text-danger mr-md-3 mb-2 mb-sm-0 text-center text-sm-right d-none">
 					<i class="fas fa-exclamation-circle"></i> There are items that require your attention
 				</div>
 			</div>
 			<div class="d-flex justify-content-sm-between align-items-center flex-wrap mt-sm-2 justify-content-center">
 				<button type="submit" class="btn btn-outline-primary btn-lg text-uppercase mb-2" data-href="#step3">Save &amp; Close </button>
-				<button type="submit" class="btn btn-primary btn-lg text-uppercase mb-2" data-href="#step3">Save &amp; Continue to next step &#10132; </button>
+				<button type="submit" class="btn btn-primary btn-lg text-uppercase mb-2" >Save &amp; Continue to next step &#10132; </button>
 			</div>
 		</form>
 	</div>

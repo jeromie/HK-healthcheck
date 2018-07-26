@@ -10,6 +10,7 @@
       form.addEventListener('submit', function(event) {
         if (form.checkValidity() === false) {
           event.preventDefault();
+          $(form).find('.form-error').removeClass('d-none');
           event.stopPropagation();
         }
         form.classList.add('was-validated');

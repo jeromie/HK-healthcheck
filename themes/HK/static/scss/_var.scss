@@ -4,6 +4,7 @@ $theme-colors: (
   "cancel": #4b4b4b,
 );
 $danger: #ad110a;
+$gray-500: #adb5bd !default;
 
 // $font-size-base: 0.7rem;
 
@@ -15,6 +16,7 @@ $line-height-lg: 2;
 $border-radius-lg: .2rem;
 $input-focus-border-color: darken(rgba(0, 191, 191, 1), 10%);
 $input-btn-focus-box-shadow: 0;
+$input-placeholder-color: $gray-500;
 
 $container-max-widths: (
   xl: 1200px
