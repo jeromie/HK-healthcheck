@@ -7,8 +7,6 @@ function checkNextStep(thisObj,event){
 	if(thisObj.checkValidity() == false)
 		return
 	var step=$(thisObj).closest('.step').data('step')
-	$(thisObj).find('.save-loader').removeClass('d-none')
-	$(thisObj).find('.save-btn').addClass('d-none')
 	goToStep(step)
 
 	$('.hk-steps li:eq('+(step-1)+')').addClass('done')
