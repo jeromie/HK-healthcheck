@@ -8749,6 +8749,7 @@ header {
   margin-top: -160px;
   z-index: 1;
   position: relative;
+  padding-bottom: 50px;
 }
 @media (max-width: 767px) {
   .step-container {
@@ -8954,7 +8955,7 @@ label.required:after {
   border-radius: 50%;
 }
 .card.step:last-child {
-  margin-bottom: 50px;
+  margin-bottom: 0;
 }
 .card.step:last-child:before, .card.step:last-child:after {
   display: none;
