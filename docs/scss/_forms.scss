@@ -79,3 +79,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_today{
   color: #fff;
 }
+.dob.no-date{
+  color: $gray-500;
+}

@@ -18,9 +18,12 @@
 		background-color: rgba(0,0,0,0.25);
 	}
 	@media(max-width: 767px){
-		padding: 3rem 1rem;
+		padding: 5rem 1rem;
 		h1{
 			font-size: 1.525rem;
 		}
+	}
+	@media(max-width: 480px){
+		padding: 3rem 1rem;
 	}
 }
