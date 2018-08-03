@@ -3,8 +3,7 @@ $(function(){
 });
 
 function checkNextStep(thisObj,event){
-	event.preventDefault(); 
-
+	event.preventDefault();
 	if(thisObj.checkValidity() == false)
 		return
 	var step=$(thisObj).closest('.step').data('step')
@@ -57,4 +56,3 @@ function resetForm(){
 	$('.hk-steps li:eq(0)').addClass('active')
 
 }
-

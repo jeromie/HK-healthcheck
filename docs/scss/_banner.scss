@@ -2,8 +2,10 @@
 	background-image: url(../img/hk-banner-bg.jpg);
 	background-size: cover;
 	background-position: 50% 40%;
+	// background-attachment: fixed;
 	padding: 12rem 2rem;
 	position: relative;
+	z-index: 1;
 	&:before{
 		content: '';
 		position: absolute;
@@ -16,9 +18,12 @@
 		background-color: rgba(0,0,0,0.25);
 	}
 	@media(max-width: 767px){
-		padding: 3rem 1rem;
+		padding: 5rem 1rem;
 		h1{
 			font-size: 1.525rem;
 		}
+	}
+	@media(max-width: 480px){
+		padding: 3rem 1rem;
 	}
 }
