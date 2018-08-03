@@ -95,7 +95,7 @@
 			
 			<div class="d-flex justify-content-center justify-content-sm-end mt-5">
 				<button class="btn btn-primary btn-lg text-uppercase save-btn mob-save" type="submit" >Continue to next step &#10132; </button>
-				<button class="btn btn-primary btn-lg text-uppercase save-loader d-none" type="button" >Saving <i class="fas fa-circle-notch fa-spin"></i></button>
+				<button class="btn btn-primary btn-lg text-uppercase save-loader d-none" type="button" disabled="">Saving <i class="fas fa-circle-notch fa-spin"></i></button>
 			</div>
 		</form>
 	</div>
@@ -358,19 +358,24 @@
 					</div>
 					<div class="col-md-8">
 					    <div class="d-flex">
-					    	<div class="">
-					    		<input type="number" class="form-control form-control-lg" id="" required="" placeholder="5'">
+					    	<div class="d-flex">
+						    	<div class="height-ft">
+						    		<input type="number" class="form-control form-control-lg" id="" required="" placeholder="5'">
+						    	</div>
+						    	<div class="mx-1 height-ft">
+						    		<input type="number" class="form-control form-control-lg" id="" required="" placeholder='6"'>
+						    	</div>
 					    	</div>
-					    	<div class="mx-1">
-					    		<input type="number" class="form-control form-control-lg" id="" required="" placeholder='6"'>
+					    	<div class="height-cms" style="width: 100%;display:none;">
+					    		<input type="number" class="form-control form-control-lg" id="" required="" placeholder="5">
 					    	</div>
 					    	<div class="">
 					    		<div class="btn-group btn-group-lg btn-group-toggle" data-toggle="buttons" role="group">
 					    			<label class="btn btn-outline-primary btn-lg active">
-					    			    <input type="radio" name="height_ft" id="feet" autocomplete="off" checked> FT
+					    			    <input type="radio" name="height_ft" class="height_ft" id="height_ft" autocomplete="off" value="ft" checked> FT
 					    			</label>
 					    			<label class="btn btn-outline-primary btn-lg">
-					    			    <input type="radio" name="height_ft" id="cms" autocomplete="off"> CMS
+					    			    <input type="radio" name="height_ft" class="height_ft" id="height_cms" autocomplete="off" value="cms"> CMS
 					    			</label>
 					    		</div>
 					    	</div>

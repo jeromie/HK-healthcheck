@@ -1,5 +1,19 @@
 $(function(){
+	$('#height_ft').change(function() {
+     console.log('Toggle: ' + $(this).is(':checked'))
+     if( $(this).is(':checked')){
+     	$('.height-ft').show()
+     	$('.height-cms').hide()
+     }
+    })
 
+    $('#height_cms').change(function() {
+     console.log('Toggle: ' + $(this).is(':checked'))
+     if( $(this).is(':checked')){
+     	$('.height-ft').hide()
+     	$('.height-cms').show()
+     }
+    })
 });
 
 function checkNextStep(thisObj,event){
@@ -57,4 +71,13 @@ function resetForm(){
 	$('.hk-steps li:eq(0)').addClass('active')
 
 }
+
+
+$(document).ready(function(){
+	$('.height_ft').click(function(){
+		console.log("dfsfs="+$(this).is(':checked'))
+	})
+
+	height_cms
+})
 
